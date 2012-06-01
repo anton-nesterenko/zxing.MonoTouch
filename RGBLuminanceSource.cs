@@ -52,9 +52,9 @@ public class RGBLuminanceSource : LuminanceSource
             int offset = y * width;
             for (int x = 0; x < width; x++)
             {
-                int r = d[offset * 3 + x * 3];
-                int g = d[offset * 3 + x * 3 + 1];
-                int b = d[offset * 3 + x * 3 + 2];
+                int b = d[offset * 4 + x * 4];
+                int g = d[offset * 4 + x * 4 + 1];
+                int r = d[offset * 4 + x * 4 + 2];
                 if (r == g && g == b)
                 {
                     // Image is already greyscale, so pick any channel.
